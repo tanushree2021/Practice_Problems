@@ -26,10 +26,8 @@ import java.util.Map;
  * No Perfect Bags
  * Output - -1
  * 
- * Perfect Bags - [625,5,25], [4,2]
- * Output - 3
- * 
  *  Input 3. [6,4,8,36,3,81,7,9]  - 3,4,6,7,8,9,36,81
+ * Perfect Bags - [3,81,9], [6,36]
  *  Output - 3
  *  
  */

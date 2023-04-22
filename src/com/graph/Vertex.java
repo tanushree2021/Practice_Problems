@@ -1,9 +1,9 @@
 package com.graph;
 
-class Vertex {
-    String label;
+class Vertex<T> {
+    T label;
     
-    Vertex(String label) {
+    Vertex(T label) {
         this.label = label;
     }
     
