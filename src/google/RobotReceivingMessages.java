@@ -80,7 +80,7 @@ class Message {
 
 }
 
-public class robotReceivingMessages {
+public class RobotReceivingMessages {
 
 	public static void main(String[] args) {
 
@@ -123,7 +123,7 @@ public class robotReceivingMessages {
 		int count = 0;
 		Message msg = new Message();
 		while (true) {
-			if (count < 7) {
+			if (count < msg.messages.size()) {
 				Message currentMsg = Message.messages.get(count++);
 
 				String actualMsg = currentMsg.getMessage();
