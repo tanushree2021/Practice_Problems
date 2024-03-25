@@ -1,5 +1,14 @@
 package com.graph;
 
+/**
+ * https://www.baeldung.com/java-graphs
+ *
+ * Graph Representations
+ * A graph can be represented in different forms such as adjacency matrix and adjacency list
+ *
+ * An adjacency matrix is a square matrix with dimensions equivalent to the number of vertices in the graph.
+ * @param <T>
+ */
 class Vertex<T> {
     T label;
     

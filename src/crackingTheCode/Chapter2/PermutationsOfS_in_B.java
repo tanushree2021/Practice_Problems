@@ -19,7 +19,7 @@ public class PermutationsOfS_in_B {
         int bLen = biggerString.length();
         int outerCount=0;
         int innerCount=0;
-        for (int i = 0; i < bLen - 3; i++) {  // B time
+        for (int i = 0; i < bLen - sLen + 1 ; i++) {  // B time
             outerCount++;
             String tempStr = biggerString.substring(i, i + sLen);
             String firstS = biggerString.substring(i, i + 1);
