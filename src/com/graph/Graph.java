@@ -59,10 +59,17 @@ public class Graph<T> {
 		StringBuffer sb = new StringBuffer();
 		for(Vertex v : adjVertices.keySet()) {
 			sb.append(v.label);
-			sb.append("-");
+			sb.append("-->");
 			List<Vertex> edges = adjVertices.get(v);
-			edges.stream().forEach(e -> sb.append(e.label+","));
-			sb.append("; ");
+			edges.stream().forEach(e ->
+				sb.append(e.label + ",")
+//				if (!(e.label.equals(edges.size() - 1))) {
+//					sb.append(",");
+//					}
+//				}
+			);
+//			if(!v.label.equals(sb.length()-1))
+			sb.append(" ; ");
 		}
 		return sb.toString();
 	}

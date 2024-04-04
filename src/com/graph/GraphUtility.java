@@ -1,6 +1,7 @@
 package com.graph;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class GraphUtility {
@@ -21,7 +22,8 @@ public class GraphUtility {
 	    return graph;
 	}
 
-	static List<Integer>[] initGraph(int[][] arr) {
+	// Adjacency List frm 2D Matrix
+	public static List<Integer>[] initGraph(int[][] arr) {
 		@SuppressWarnings("unchecked")
 		List<Integer>[] graph = new ArrayList[arr.length];
 		for (int a = 0; a < arr.length; a++) {
@@ -37,5 +39,39 @@ public class GraphUtility {
 			System.out.println("For vertex=" + a + " edges=" + graph[a]);
 		}
 		return graph;
+	}
+
+	public static List[] initGraphAdjList(int vertices)
+	{
+		List<Integer>[] adjList = new LinkedList[vertices];
+		for (int i = 0; i < vertices; ++i)
+			adjList[i] = new LinkedList<>();
+		return adjList;
+	}
+
+	// Function to print the graph representation, for Adjacency List
+	public static void printGraph(List[] list, int vertices)
+	{
+		for(int i = 0; i < vertices; i++)
+		{
+			System.out.print(i + "--> ");
+			for(int j = 0; j < list[i].size(); j++)
+				System.out.print(list[i].get(j) + " ");
+			System.out.println();
+		}
+	}
+
+	/**
+	 *
+	 * 	0 --> 2
+	 * 	1 --> 0
+	 * 	2 --> 3 , 1
+	 * 	3 -->
+	 *
+	 * @param u
+	 * @param v
+	 */
+	public static void addEdge(int u, int v, List[] adjList) {
+		adjList[u].add(v);
 	}
 }
