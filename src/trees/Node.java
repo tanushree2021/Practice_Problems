@@ -2,7 +2,7 @@ package trees;
 
 public class Node {
 
-	int data;
+	public int data;
 	public Node left;
 	public Node right;
 	

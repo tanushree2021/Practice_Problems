@@ -29,7 +29,7 @@ package trees;
  */
 public class TreeUtility {
 
-	static void createTree(Node node) {
+	public static void createTree(Node node) {
 		Node n2 = new Node(2);
 		Node n3 = new Node(3);
 		Node n4 = new Node(4);

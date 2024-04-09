@@ -80,8 +80,11 @@ Output : 0, 1, 2, 3, 4
         GraphUtility.addEdge(1, 4, adjList);
         GraphUtility.addEdge(2, 4, adjList);
 
+        System.out.println("Example 1 :");
+
         breadthFirstTraversal(adjList, 0);
         System.out.println("=========================");
+
         /*
         Example - 2
  rc 0   1   2   3   4   5
@@ -97,6 +100,7 @@ Output : 0, 1, 2, 3, 4
         int[][] example2 = {{0,1,1,0,0,0},{0,0,1,1,0,0},{0,0,0,1,0,0},{0,0,0,0,1,0},{1,1,0,0,0,1},{0,0,0,0,0,0}};
 
         adjList = GraphUtility.initGraph(example2);
+        System.out.println("Example 2 :");
         breadthFirstTraversal(adjList, 0);
     }
 
@@ -113,8 +117,8 @@ Output : 0, 1, 2, 3, 4
         boolean[] visited = new boolean[adjList.length];
         visited[start]=true;
 
-        List<Integer> visitedList = new ArrayList<>();
-        visitedList.add(start);
+//        List<Integer> visitedList = new ArrayList<>();
+//        visitedList.add(start);
 
         queue.add(start);
         while(!queue.isEmpty()) { //[0] 0 ; [1,2] 1 ; [2,3,4] 2; [3,4] 3
@@ -127,12 +131,12 @@ Output : 0, 1, 2, 3, 4
                     {
                         queue.add(v); // queue : 1,2 ; 2,3,4
                         visited[v] = true; // [true, true, true, false, false]; [true, true, true, true, true]
-                        visitedList.add(v);
+//                        visitedList.add(v);
                     }
                 }
             }
         }
 
-        System.out.println("Breath first visited List --> "+visitedList);
+//        System.out.println("Breath first visited List --> "+visitedList);
     }
 }

@@ -9,8 +9,6 @@ public class TreeHeight {
         tree.left.left = new Node(4);
         tree.left.right = new Node(5);
 
-        System.out.println("Level order traversal of"
-                + "binary tree is ");
         int height = findTreeHeight(tree);
         System.out.println("height of tree = "+height);
         int height2 = findTreeHeightFromGeeksfofGeeks(tree);
@@ -27,7 +25,7 @@ public class TreeHeight {
      * @param root
      * @return
      */
-    private static int findTreeHeight(Node root) {
+    public static int findTreeHeight(Node root) {
         if(root == null)
             return 0;
         else if(root.left == null && root.right == null) {
